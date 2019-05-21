@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: sample-app
-    image: cve-2017-5638-sample-non-root
     securityContext:
+      runAsUser: 1111
       runAsNonRoot: true
       allowPrivilegeEscalation: false

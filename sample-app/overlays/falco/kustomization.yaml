@@ -1,0 +1,4 @@
+bases:
+- ../../base
+patches:
+- falco_node.yaml
