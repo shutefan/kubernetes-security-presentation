@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-app
+spec:
+  containers:
+  - name: sample-app
+    image: cve-2017-5638-sample-non-root
+    securityContext:
+      runAsNonRoot: true
+      allowPrivilegeEscalation: false

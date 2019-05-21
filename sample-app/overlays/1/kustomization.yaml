@@ -1,0 +1,4 @@
+bases:
+- ../../base
+patches:
+- no_root.yaml

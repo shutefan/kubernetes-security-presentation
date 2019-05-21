@@ -1,0 +1,4 @@
+bases:
+- ../1
+patches:
+- no_privileges.yaml

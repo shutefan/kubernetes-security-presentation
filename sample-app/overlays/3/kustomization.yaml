@@ -1,0 +1,4 @@
+bases:
+- ../2
+patches:
+- read_only.yaml
