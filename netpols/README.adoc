@@ -1,0 +1,10 @@
+= Network policies
+
+The manifests for network policies and nginx servers in this directory can be used to demonstrate
+how network policies restrict traffic.
+
+Example commands from within a pod labeled `app=sample-app`:
+
+* `kubectl run -it --rm --restart=Never -l app=sample-app netpol-test --image=library/alpine -- wget -qO- --timeout=1 http://blue`
+* `kubectl run -it --rm --restart=Never -l app=sample-app netpol-test --image=library/alpine -- wget -qO- --timeout=1 http://green`
+* `kubectl run -it --rm --restart=Never -l app=sample-app netpol-test --image=library/alpine -- wget -qO- --timeout=1 http://google.com`

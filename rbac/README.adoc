@@ -1,0 +1,9 @@
+= RBAC
+
+The gosu role and rolebinding files create a role that has access to everything and is bound
+to the default service account.
+
+[IMPORTANT]
+====
+You should not use this configuration in production, it is solely for demonstration purposes!
+====
