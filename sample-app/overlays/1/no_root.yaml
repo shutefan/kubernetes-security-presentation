@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: sample-app
 spec:
+  automountServiceAccountToken: false
   containers:
   - name: sample-app
     securityContext:
