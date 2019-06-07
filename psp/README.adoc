@@ -1,0 +1,8 @@
+= Pod Security Policy
+
+This directory contains examples for pod security policies.
+
+They are derived from kubespray's templates:
+https://github.com/kubernetes-sigs/kubespray/tree/fa791cc3449a3d65f8b02cdb2c33436a90884202/roles/kubernetes-apps/cluster_roles/templates
+
+Kubespray is licensed under the Apache 2.0 license as is included in this directory.
